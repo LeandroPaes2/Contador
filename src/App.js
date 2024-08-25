@@ -1,17 +1,34 @@
 import './App.css';
-import useAcao from './CONTADOR.js';
 
+let contador = 0;
 function App() {
-  const { contador, aumentar, diminuir } = useAcao();
+  
+  const atualizarContador = () => {
+    document.getElementById('contador').innerText = contador;
+  };
+
+  const mais = () => {
+      contador += 1;
+      atualizarContador();
+  };
+
+  const menos = () => {
+      contador -= 1;
+      atualizarContador();
+  };
+
   return (
+    
+    
+
     <body>
     <div class="quadrado">
 
-    <p style={{fontSize:'40px', position:'absolute', margin:'-40px auto'}}>{contador}</p>
+    <p id="contador" style={{fontSize:'40px', position:'absolute', margin:'-40px auto'}}>{contador}</p>
 
-    <button style={{margin:'125px 0px 0px -184px'}} onClick={aumentar}>+</button>
+    <button onClick={mais} style={{margin:'125px 0px 0px -184px'}}>+</button>
 
-    <button style={{margin:'125px 0px 0px 0px'}} onClick={diminuir}>-</button>  
+    <button onClick={menos} style={{margin:'125px 0px 0px 0px'}}>-</button>  
     </div>
     </body>
   );
