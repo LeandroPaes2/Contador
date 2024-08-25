@@ -2,22 +2,13 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <body>
+    <div class="quadrado">
+    <button style={{margin:'125px 0px 0px -184px'}}>+</button>
+
+    <button style={{margin:'125px 0px 0px 0px'}}>-</button>  
     </div>
+    </body>
   );
 }
 
